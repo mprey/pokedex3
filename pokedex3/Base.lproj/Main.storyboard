@@ -93,16 +93,23 @@
                                             <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iNq-XE-5BQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIh-FW-Z58">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="3a3-0Y-Uw2"/>
-                                            <constraint firstAttribute="height" constant="30" id="AVX-v2-xGA"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="back"/>
-                                        <connections>
-                                            <action selector="backBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kPo-iU-5zh"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JlJ-RU-Kzp">
+                                        <frame key="frameInset" minX="8" minY="22" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIh-FW-Z58">
+                                                <frame key="frameInset" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="3a3-0Y-Uw2"/>
+                                                    <constraint firstAttribute="height" constant="30" id="AVX-v2-xGA"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="back"/>
+                                                <connections>
+                                                    <action selector="backBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kPo-iU-5zh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xQ-sE-KzI">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="91.329999999999998" id="f0S-tC-soX"/>
@@ -118,8 +125,6 @@
                                     <constraint firstAttribute="trailing" secondItem="wlG-l0-Kui" secondAttribute="trailing" constant="8" id="3b2-Ib-gj3"/>
                                     <constraint firstAttribute="bottom" secondItem="0xQ-sE-KzI" secondAttribute="bottom" constant="5" id="HdW-Fb-24h"/>
                                     <constraint firstAttribute="height" constant="60" id="RLa-f8-1Wd"/>
-                                    <constraint firstItem="aIh-FW-Z58" firstAttribute="leading" secondItem="V5Z-se-6Cb" secondAttribute="leading" constant="8" id="Wfw-bm-op7"/>
-                                    <constraint firstAttribute="bottom" secondItem="aIh-FW-Z58" secondAttribute="bottom" constant="8" id="bLC-6f-bUa"/>
                                     <constraint firstItem="0xQ-sE-KzI" firstAttribute="centerX" secondItem="V5Z-se-6Cb" secondAttribute="centerX" id="v65-gT-Opc"/>
                                     <constraint firstAttribute="bottom" secondItem="wlG-l0-Kui" secondAttribute="bottom" constant="8" id="zTi-8I-cyb"/>
                                 </constraints>
