@@ -1,4 +1,4 @@
 # pokedex3
 Pokedex app for iOS 10 powered by the PokeAPI
 
-![alt tag](https://raw.githubusercontent.com/mprey/pokedex/master/asset/screenshot-main.png)
+<img src="https://raw.githubusercontent.com/mprey/pokedex3/master/asset/screenshot-main.png" width="200">
