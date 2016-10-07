@@ -18,6 +18,7 @@
 		2A26DE531DA6A158009CD513 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A26DE521DA6A158009CD513 /* PokemonCell.swift */; };
 		2A26DE591DA7EB32009CD513 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A26DE581DA7EB32009CD513 /* Pokemon Solid.ttf */; };
 		2A26DE5C1DA7EC3A009CD513 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A26DE5B1DA7EC3A009CD513 /* music.mp3 */; };
+		2A26DE601DA81D23009CD513 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A26DE5F1DA81D23009CD513 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2A26DE521DA6A158009CD513 /* PokemonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		2A26DE581DA7EB32009CD513 /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
 		2A26DE5B1DA7EC3A009CD513 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		2A26DE5F1DA81D23009CD513 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				2A26DE3A1DA69810009CD513 /* PokedexController.swift */,
+				2A26DE5F1DA81D23009CD513 /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				2A26DE3B1DA69810009CD513 /* PokedexController.swift in Sources */,
 				2A26DE4F1DA6A008009CD513 /* Pokemon.swift in Sources */,
 				2A26DE4D1DA69A71009CD513 /* csv.swift in Sources */,
+				2A26DE601DA81D23009CD513 /* DetailViewController.swift in Sources */,
 				2A26DE391DA69810009CD513 /* AppDelegate.swift in Sources */,
 				2A26DE531DA6A158009CD513 /* PokemonCell.swift in Sources */,
 			);

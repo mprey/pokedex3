@@ -32,6 +32,16 @@ class PokedexController: UIViewController, UICollectionViewDelegate, UICollectio
         self.initAudio()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PokemonDetailSegue" {
+            if let detailVC = segue.destination as? DetailViewController {
+                if let pokemon = sender as? Pokemon {
+                    detailVC.pokemon = pokemon
+                }
+            }
+        }
+    }
+    
     func initAudio() {
         let path = Bundle.main.path(forResource: "music", ofType: "mp3")!
         do {
@@ -62,7 +72,13 @@ class PokedexController: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //TODO
+        var poke: Pokemon!
+        if searchMode {
+            poke = self.filteredPokemon[indexPath.row]
+        } else {
+            poke = self.pokemon[indexPath.row]
+        }
+        performSegue(withIdentifier: "PokemonDetailSegue", sender: poke)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
