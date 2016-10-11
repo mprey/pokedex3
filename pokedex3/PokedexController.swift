@@ -32,6 +32,10 @@ class PokedexController: UIViewController, UICollectionViewDelegate, UICollectio
         self.initAudio()
     }
     
+    @IBAction func unwindToVC(segue: UIStoryboardSegue) {
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PokemonDetailSegue" {
             if let detailVC = segue.destination as? DetailViewController {
