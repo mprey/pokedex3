@@ -121,6 +121,10 @@ class PokedexController: UIViewController, UICollectionViewDelegate, UICollectio
     }
 
     @IBAction func backBtnPressed(_ sender: UIButton) {
+        self.searchBar.text = ""
+        self.searchMode = false
+        self.filteredPokemon.removeAll()
+        self.pokemonCollection.reloadData()
     }
 
     @IBAction func musicBtnPressed(_ sender: UIButton) {
@@ -130,6 +134,18 @@ class PokedexController: UIViewController, UICollectionViewDelegate, UICollectio
         } else {
             self.musicPlayer.play()
             sender.alpha = 1.0
+        }
+    }
+}
+
+extension UIView {
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
         }
     }
 }
