@@ -19,7 +19,7 @@ class PokemonCell: UICollectionViewCell {
         self.pokemon = pokemon
         
         self.name.text = pokemon.name.capitalized
-        self.image.image = UIImage(named: "\(pokemon.pokeid)")
+        self.image.image = UIImage(named: "\(pokemon.pokedexID)")
         
         self.contentView.layer.cornerRadius = 2.0
     }
