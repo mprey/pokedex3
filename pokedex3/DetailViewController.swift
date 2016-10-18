@@ -12,6 +12,8 @@ class DetailViewController: UIViewController {
     
     var pokemon: Pokemon!
     
+    var loadingView: LoadingOverlay?
+    
     @IBOutlet weak var secondImage: UIImageView!
     @IBOutlet weak var firstImage: UIImageView!
     @IBOutlet weak var mainImg: UIImageView!
@@ -31,6 +33,9 @@ class DetailViewController: UIViewController {
         
         self.pokemonLabel.text = self.pokemon.name.capitalized
         
+        self.loadingView = LoadingOverlay()
+        self.loadingView?.showOverlay(view: self.view)
+        
         self.pokemon.downloadData {
             self.updateUI()
         }
@@ -42,7 +47,19 @@ class DetailViewController: UIViewController {
     }
     
     func updateUI() {
-        //TODO
+        self.mainImg.image = UIImage(named: "\(self.pokemon.pokedexID)")
+        self.firstImage.image = UIImage(named: "\(self.pokemon.pokedexID)")
+        self.pokedexIDLabel.text = "\(self.pokemon.pokedexID)"
+        self.baseAttackLabel.text = self.pokemon.attack
+        self.heightLabel.text = self.pokemon.height
+        self.weightLabel.text = self.pokemon.weight
+        self.defenseLabel.text = self.pokemon.defense
+        self.typeLabel.text = self.pokemon.type
+        self.descriptionLabel.text = self.pokemon.description
+        self.nextEvolutionLabel.text = self.nextEvolutionLabel.text?.appending(self.pokemon.nextEvolutionText)
+        self.secondImage.image = UIImage(named: "\(self.pokemon.nextEvolutionID == "" ? "none" : self.pokemon.nextEvolutionID)")
+        
+        self.loadingView?.hideOverlayView()
     }
 
 }
